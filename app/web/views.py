@@ -14,6 +14,6 @@ def post():
     urls = google_utils.get_images_url(word)
     sents = google_utils.get_sentence(word)
 
-    values = { 'images' : urls, 'sentences' : sents}
+    values = { 'word' : word,'images' : urls, 'sentences' : sents}
     return render_template('result.html',
       data = values)

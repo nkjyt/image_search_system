@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
     <div class="container">
+        <h1 class="my-5">{{data.word}}</h1>
         {% for img in data.images %}
         <tbody>
             <td><img src="{{img}}" class="img-thumbnail" alt=""></td>
