@@ -1,9 +1,16 @@
 {% extends "base.html" %}
 {% block content %}
     <div class="container">
-        {% for img in data %}
+        {% for img in data.images %}
         <tbody>
             <td><img src="{{img}}" class="img-thumbnail" alt=""></td>
+        </tbody>
+        {% endfor %}
+    </br>
+
+        {% for s in data.sentences %}
+        <tbody>
+            <td><p class="text-black mt-1 font-serif">{{s}}</p></td>
         </tbody>
         {% endfor %}
     </div>

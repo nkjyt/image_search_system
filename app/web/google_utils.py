@@ -20,6 +20,8 @@ def get_images_url(query):
     for tag in img_list:
         if tag.has_attr('data-src'):
             urlList.append(tag.attrs['data-src'])
+            if len(urlList) == 15:
+                break
 
     return urlList
 
@@ -34,6 +36,6 @@ def get_sentence(word):
 
     return sentence_list
 
-if __name__ == '__main__':
+""" if __name__ == '__main__':
     l = get_sentence('vase')
-    print(l)
+    print(l) """
